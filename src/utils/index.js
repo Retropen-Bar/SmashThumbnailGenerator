@@ -45,9 +45,10 @@ const utils = {
         return rand;
     },
     getRoot() {
-        return process.env.NODE_ENV === 'production'
-                        ? '/SmashThumbnailGenerator/'
-                        : '/'
+        // return process.env.NODE_ENV === 'production'
+        //                 ? '/SmashThumbnailGenerator/'
+        //                 : '/'
+        return '/'
     },
 
     // CANVAS SNAP
