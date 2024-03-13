@@ -73,7 +73,25 @@
     /*Non-IE*/
     src: url('../fonts/gotham_black_regular.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Overpass';
+    /*IE*/
+    src: url('../fonts/overpass.ttf');
+    /*Non-IE*/
+    src: url('../fonts/overpass.ttf') format('truetype');
+}  
+@font-face {
+    font-family: 'TungstenNarrow';
+    font-weight: 800;
+    src: url("../fonts/tungsten-narrow-bold.otf") format("opentype");
+}
+  
+@font-face {
+    font-family: 'TungstenNarrow';
+    font-weight: 600;
+    src: url("../fonts/tungsten-narrow-semibold.otf") format("opentype");
+}
+  
 html {
     overflow-y: hidden;
 }

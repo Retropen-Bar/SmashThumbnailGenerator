@@ -5,7 +5,9 @@ const customFonts = [{name: 'Futura Bold'},
                      {name: 'Android Assassin'},
                      {name: 'Gotham Black Regular'},
                      {name: 'Heroes Legend'},
-                     {name: 'Heroes Legend Hollow'}];
+                     {name: 'Heroes Legend Hollow'},
+                     {name: 'Overpass'},
+                     {name: 'TungstenNarrow'}];
 
 export default {
     FONTS: customFonts
