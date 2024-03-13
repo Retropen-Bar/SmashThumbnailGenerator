@@ -15,7 +15,7 @@
 
           <v-col>
             <p class="apply-font" style="margin: 0.5em 1em;">Google Font</p>
-            <font-picker :api-key="key" :active-font="fontFamily" @change="updateFont" class="font-select" /> 
+            <font-picker :api-key="key" :options="fontPickerOptions" :active-font="fontFamily" @change="updateFont" class="font-select" /> 
             
             <v-btn @click="forceUpdate" class="pa-1 no-min-width" color="error" dark small>
               <v-icon dense dark>mdi-refresh</v-icon>FORCE UPDATE
@@ -90,6 +90,9 @@ export default {
       },
       key: 'AIzaSyBK9DgEY5MY3DNBps6r9vYbKeJ7fXW6HmA',
       fontFamily: '',
+      fontPickerOptions: {
+        limit: 2000
+      },
       customFontFamily: 'Futura Bold',
       customFonts: CustomFonts.FONTS
     };
