@@ -39,6 +39,11 @@ npm install
 npm run serve
 ```
 
+### Compiles for deployment
+```
+NODE_OPTIONS=--openssl-legacy-provider npm run build
+```
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 

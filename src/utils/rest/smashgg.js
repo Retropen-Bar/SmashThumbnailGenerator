@@ -1,6 +1,5 @@
 
 import axios from 'axios';
-import { config } from '../../../public/config';
 import { i18n } from '../../main';
 import characters from '../characters';
 import stocks from '../stocks';
@@ -48,7 +47,7 @@ const sgg = {
         }
       `;
       const headers = {
-        'Authorization': `Bearer ${config.smashgg.token}`,
+        'Authorization': `Bearer ${window.SMASHGG_API_TOKEN}`,
         'Content-Type': 'application/json',
       }
       let page = 1;
@@ -60,7 +59,7 @@ const sgg = {
         errors: []
       };
       while (page < totalPages) {
-        const res = await axios.post(config.smashgg.url, {
+        const res = await axios.post("https://api.smash.gg/gql/alpha", {
             query: query,
             variables: {
                 "eventSlug": eventSlug,
