@@ -458,7 +458,7 @@ class CustomText {
       setTimeout(() => {
         this.bold = !this.bold;
       }, 10);
-    }, 10);
+    }, 500);
   }
 }
 
