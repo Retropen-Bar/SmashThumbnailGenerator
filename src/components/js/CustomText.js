@@ -1,6 +1,7 @@
 import { fabric } from "fabric";
 import { CustomRect } from "./CustomRect";
 import { Shadow } from "./Shadow";
+// import { set } from "lodash";
 
 var FontFaceObserver = require('fontfaceobserver');
 
@@ -299,6 +300,8 @@ class CustomText {
       console.log('font loaded', pFont);
 
       self.align();
+
+      self.forceRefresh();
     }).catch(function (e) {
       console.log('font loading failed', pFont, e);
     });
@@ -446,6 +449,16 @@ class CustomText {
     }
 
     this.canvas.renderAll();
+  }
+
+  // dirty hack to force refresh rendering
+  forceRefresh() {
+    setTimeout(() => {
+      this.bold = !this.bold;
+      setTimeout(() => {
+        this.bold = !this.bold;
+      }, 10);
+    }, 10);
   }
 }
 

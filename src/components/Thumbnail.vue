@@ -74,6 +74,9 @@ import Stocks from "../utils/stocks"
 import Utils from "../utils"
 import Games from "../utils/games"
 
+import DefaultConfig from "../assets/default.json"
+// import { set } from "vue/types/umd";
+
 export default {
   name: "Thumbnail",
   components: {
@@ -250,6 +253,11 @@ export default {
     this.$refs.confTxt.updateCustomFont();
     this.$refs.confImg.updateCanvas(this.canvas);
     console.log(this.$options.name + ' component succesfully mounted');
+
+    setTimeout(() => {
+      console.log('DefaultConfig:', DefaultConfig);
+      this.importInfos(DefaultConfig);
+    }, 1000);
   }, methods: {
     initGridLines() {
       // create grid
